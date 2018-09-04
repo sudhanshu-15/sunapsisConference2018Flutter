@@ -9,6 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cloud_firestore: ^0.7.4
+  firebase_auth: ^0.5.19
+  rxdart: ^0.18.1
 
   cupertino_icons: ^0.1.2
 
