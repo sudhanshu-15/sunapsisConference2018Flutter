@@ -9,23 +9,42 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FutureBuilder(
-        future: _createUser(),
-        builder: (BuildContext context, AsyncSnapshot<FirebaseUser> snapshot) {
-          if (snapshot.hasData) {
-            return Center(
-              child: Container(
-                child: Text("User: ${snapshot.data.uid}"),
+        body: Container(
+      color: Colors.teal[300],
+      child: Center(
+        child: Stack(
+          key: Key("splash_screen"),
+          children: <Widget>[
+            AspectRatio(
+              aspectRatio: 360 / 640,
+              child: Image.asset(
+                "res/splash.png",
+                fit: BoxFit.fill,
               ),
-            );
-          }
-          return Center(
-            child: Container(
-              child: Text("User: loading"),
             ),
-          );
-        },
+            Positioned(
+              child: _showProgress(context),
+              top: MediaQuery.of(context).size.height / 1.5,
+              left: MediaQuery.of(context).size.width / 2.5,
+            )
+          ],
+        ),
       ),
+    ));
+  }
+
+  Widget _showProgress(BuildContext context) {
+    return FutureBuilder(
+      future: _createUser(),
+      builder: (BuildContext context, AsyncSnapshot<FirebaseUser> snapshot) {
+        if (snapshot.hasData) {
+          return RaisedButton.icon(
+              onPressed: () => _navigate(context),
+              icon: Icon(Icons.group),
+              label: Text("Login"));
+        }
+        return CircularProgressIndicator();
+      },
     );
   }
 
@@ -39,5 +58,9 @@ class SplashScreen extends StatelessWidget {
       print("user created: ${user.uid}");
     }
     return user;
+  }
+
+  void _navigate(BuildContext context) {
+    Navigator.of(context).pushNamed("/events");
   }
 }
