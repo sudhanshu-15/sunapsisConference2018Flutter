@@ -1,10 +1,36 @@
 import 'dart:async';
 
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:sunapsis_conference18/blocs/login_bloc.dart';
+import 'package:sunapsis_conference18/blocs/login_bloc_provider.dart';
 
-class SplashScreen extends StatelessWidget {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+class SplashScreen extends StatefulWidget {
+  @override
+  SplashScreenState createState() => SplashScreenState();
+}
+
+class SplashScreenState extends State<SplashScreen> {
+  LoginBloc _loginBloc;
+  StreamSubscription<bool> _isLoggedInSubscription;
+  Timer _timer;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _loginBloc = LoginBlocProvider.of(context);
+    _isLoggedInSubscription = _loginBloc.isLoggedIn.listen((bool loginState) {
+      if (loginState) {
+        _timer = Timer(Duration(seconds: 2), () {
+          Navigator.of(context).pushReplacementNamed("/events");
+        });
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +49,7 @@ class SplashScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              child: _showProgress(context),
+              child: CircularProgressIndicator(),
               top: MediaQuery.of(context).size.height / 1.5,
               left: MediaQuery.of(context).size.width / 2.5,
             )
@@ -33,34 +59,10 @@ class SplashScreen extends StatelessWidget {
     ));
   }
 
-  Widget _showProgress(BuildContext context) {
-    return FutureBuilder(
-      future: _createUser(),
-      builder: (BuildContext context, AsyncSnapshot<FirebaseUser> snapshot) {
-        if (snapshot.hasData) {
-          return RaisedButton.icon(
-              onPressed: () => _navigate(context),
-              icon: Icon(Icons.group),
-              label: Text("Login"));
-        }
-        return CircularProgressIndicator();
-      },
-    );
-  }
-
-  Future<FirebaseUser> _createUser() async {
-    FirebaseUser user = await _auth.currentUser();
-    if (user != null && user.uid.length != 0) {
-      print("user found ${user.uid}");
-      return user;
-    } else {
-      user = await _auth.signInAnonymously();
-      print("user created: ${user.uid}");
-    }
-    return user;
-  }
-
-  void _navigate(BuildContext context) {
-    Navigator.of(context).pushNamed("/events");
+  @override
+  void dispose() {
+    _isLoggedInSubscription.cancel();
+    _timer.cancel();
+    super.dispose();
   }
 }

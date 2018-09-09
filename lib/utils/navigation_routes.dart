@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sunapsis_conference18/pages/events.dart';
 import 'package:sunapsis_conference18/pages/splash_screen.dart';
 
 class NavigationRoutes {
@@ -10,13 +11,7 @@ class NavigationRoutes {
         );
       default:
         return MaterialPageRoute(
-          builder: (BuildContext context) {
-            return Scaffold(
-              body: Center(
-                child: Text("hello unknown"),
-              ),
-            );
-          },
+          builder: (BuildContext context) => Events(),
         );
     }
   }
