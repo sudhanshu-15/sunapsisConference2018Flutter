@@ -19,6 +19,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  mockito: ^3.0.0
+
 
 flutter:
   uses-material-design: true
+  assets:
+    - res/splash.png
