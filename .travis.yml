@@ -20,4 +20,4 @@ after_success:
   - coveralls-lcov coverage/lcov.info
 cache:
   directories:
-- $HOME/.pub-cache
+    - $HOME/.pub-cache
