@@ -17,16 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sunapsis_conference_app.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/pages/sunapsis_conference_app.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="splash_screen.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/pages/splash_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
@@ -40,8 +30,8 @@
       <file leaf-file-name="conference_event_test.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/unit_tests/models/conference_event_test.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
-              <caret line="43" column="62" lean-forward="false" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
+            <state relative-caret-position="285">
+              <caret line="15" column="23" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
               </folding>
@@ -81,12 +71,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conference_speaker.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="conference_speaker.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/models/conference_speaker.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+            <state relative-caret-position="171">
+              <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conference_speaker_test.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/unit_tests/models/conference_speaker_test.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#70#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,6 +175,7 @@
         <option value="$PROJECT_DIR$/lib/models/conference_event.dart" />
         <option value="$PROJECT_DIR$/lib/blocs/login_bloc.dart" />
         <option value="$PROJECT_DIR$/lib/models/conference_speaker.dart" />
+        <option value="$PROJECT_DIR$/test/unit_tests/models/conference_speaker_test.dart" />
       </list>
     </option>
   </component>
@@ -284,7 +287,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flutter Test.Creates correct ConferenceEvent with map">
+  <component name="RunManager" selected="Flutter Test.Creates correct ConferenceSpeaker with map">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -323,9 +326,9 @@
       <option name="testName" value="Creates correct ConferenceEvent with map" />
       <option name="testFile" value="$PROJECT_DIR$/test/unit_tests/models/conference_event_test.dart" />
     </configuration>
-    <configuration name="isLoggedIn and getUser stream is closed on dispose()" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="isLoggedIn and getUser stream is closed on dispose()" />
-      <option name="testFile" value="$PROJECT_DIR$/test/blocs/login_bloc_test.dart" />
+    <configuration name="Creates correct ConferenceSpeaker with map" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="Creates correct ConferenceSpeaker with map" />
+      <option name="testFile" value="$PROJECT_DIR$/test/unit_tests/models/conference_speaker_test.dart" />
     </configuration>
     <configuration name="isLoggedIn stream is closed on dispose()" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
       <option name="testName" value="isLoggedIn stream is closed on dispose()" />
@@ -392,18 +395,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Flutter.main.dart" />
       <item index="1" class="java.lang.String" itemvalue="Flutter Test.isLoggedIn stream is closed on dispose()" />
-      <item index="2" class="java.lang.String" itemvalue="Flutter Test.isLoggedIn and getUser stream is closed on dispose()" />
-      <item index="3" class="java.lang.String" itemvalue="Flutter Test.tests in login_bloc_test.dart" />
-      <item index="4" class="java.lang.String" itemvalue="Flutter Test.tests in test" />
-      <item index="5" class="java.lang.String" itemvalue="Flutter Test.Creates correct ConferenceEvent with map" />
+      <item index="2" class="java.lang.String" itemvalue="Flutter Test.tests in login_bloc_test.dart" />
+      <item index="3" class="java.lang.String" itemvalue="Flutter Test.tests in test" />
+      <item index="4" class="java.lang.String" itemvalue="Flutter Test.Creates correct ConferenceEvent with map" />
+      <item index="5" class="java.lang.String" itemvalue="Flutter Test.Creates correct ConferenceSpeaker with map" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Flutter Test.Creates correct ConferenceEvent with map" />
-        <item index="1" class="java.lang.String" itemvalue="Flutter Test.tests in test" />
-        <item index="2" class="java.lang.String" itemvalue="Flutter Test.tests in login_bloc_test.dart" />
-        <item index="3" class="java.lang.String" itemvalue="Flutter Test.isLoggedIn stream is closed on dispose()" />
-        <item index="4" class="java.lang.String" itemvalue="Flutter Test.isLoggedIn and getUser stream is closed on dispose()" />
+        <item index="0" class="java.lang.String" itemvalue="Flutter Test.Creates correct ConferenceSpeaker with map" />
+        <item index="1" class="java.lang.String" itemvalue="Flutter Test.Creates correct ConferenceEvent with map" />
+        <item index="2" class="java.lang.String" itemvalue="Flutter Test.tests in test" />
+        <item index="3" class="java.lang.String" itemvalue="Flutter Test.tests in login_bloc_test.dart" />
+        <item index="4" class="java.lang.String" itemvalue="Flutter Test.isLoggedIn stream is closed on dispose()" />
       </list>
     </recent_temporary>
   </component>
@@ -475,9 +478,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -525,14 +528,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/models.dart" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -876,16 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit_tests/models/conference_event_test.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="43" column="62" lean-forward="false" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/pages/splash_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -912,11 +897,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit_tests/models/conference_event_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/models/conference_speaker.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+        <state relative-caret-position="171">
+          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit_tests/models/conference_speaker_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
