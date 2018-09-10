@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7149e70-f826-4cd8-99c8-3a8e153f77cf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/lib/models/conference_event.dart" afterPath="$PROJECT_DIR$/lib/models/conference_event.dart" />
+      <change beforePath="$PROJECT_DIR$/test/unit_tests/models/conference_event_test.dart" afterPath="$PROJECT_DIR$/test/unit_tests/models/conference_event_test.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -37,12 +38,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <file leaf-file-name="conference_event_test.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/unit_tests/models/conference_event_test.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="717">
+              <caret line="43" column="62" lean-forward="false" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,8 +53,18 @@
       <file leaf-file-name="conference_event.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/models/conference_event.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            <state relative-caret-position="285">
+              <caret line="15" column="56" lean-forward="true" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="document_reference.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.8.0/lib/src/document_reference.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -98,16 +111,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
               <caret line="1" column="26" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="firebase_auth.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.5.20/lib/firebase_auth.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3493">
-              <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -170,6 +173,7 @@
         <option value="$PROJECT_DIR$/lib/pages/splash_screen.dart" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/.circleci/config.yml" />
+        <option value="$PROJECT_DIR$/test/unit_tests/models/conference_event_test.dart" />
         <option value="$PROJECT_DIR$/lib/models/conference_event.dart" />
       </list>
     </option>
@@ -219,12 +223,31 @@
               <item name="sunapsis_conference18" type="b2602c69:ProjectViewProjectNode" />
               <item name="sunapsis_conference18" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sunapsis_conference18" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sunapsis_conference18" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sunapsis_conference18" type="b2602c69:ProjectViewProjectNode" />
               <item name="sunapsis_conference18" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sunapsis_conference18" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sunapsis_conference18" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="unit_tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sunapsis_conference18" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sunapsis_conference18" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="unit_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -263,7 +286,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flutter Test.tests in test">
+  <component name="RunManager" selected="Flutter Test.Creates correct ConferenceEvent with map">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -298,9 +321,9 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="Stream does not emit a value when currentUser() returns an error" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="Stream does not emit a value when currentUser() returns an error" />
-      <option name="testFile" value="$PROJECT_DIR$/test/blocs/login_bloc_test.dart" />
+    <configuration name="Creates correct ConferenceEvent with map" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="Creates correct ConferenceEvent with map" />
+      <option name="testFile" value="$PROJECT_DIR$/test/unit_tests/models/conference_event_test.dart" />
     </configuration>
     <configuration name="isLoggedIn and getUser stream is closed on dispose()" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
       <option name="testName" value="isLoggedIn and getUser stream is closed on dispose()" />
@@ -370,19 +393,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Flutter.main.dart" />
-      <item index="1" class="java.lang.String" itemvalue="Flutter Test.Stream does not emit a value when currentUser() returns an error" />
-      <item index="2" class="java.lang.String" itemvalue="Flutter Test.isLoggedIn stream is closed on dispose()" />
-      <item index="3" class="java.lang.String" itemvalue="Flutter Test.isLoggedIn and getUser stream is closed on dispose()" />
-      <item index="4" class="java.lang.String" itemvalue="Flutter Test.tests in login_bloc_test.dart" />
-      <item index="5" class="java.lang.String" itemvalue="Flutter Test.tests in test" />
+      <item index="1" class="java.lang.String" itemvalue="Flutter Test.isLoggedIn stream is closed on dispose()" />
+      <item index="2" class="java.lang.String" itemvalue="Flutter Test.isLoggedIn and getUser stream is closed on dispose()" />
+      <item index="3" class="java.lang.String" itemvalue="Flutter Test.tests in login_bloc_test.dart" />
+      <item index="4" class="java.lang.String" itemvalue="Flutter Test.tests in test" />
+      <item index="5" class="java.lang.String" itemvalue="Flutter Test.Creates correct ConferenceEvent with map" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Flutter Test.tests in test" />
-        <item index="1" class="java.lang.String" itemvalue="Flutter Test.tests in login_bloc_test.dart" />
-        <item index="2" class="java.lang.String" itemvalue="Flutter Test.isLoggedIn stream is closed on dispose()" />
-        <item index="3" class="java.lang.String" itemvalue="Flutter Test.isLoggedIn and getUser stream is closed on dispose()" />
-        <item index="4" class="java.lang.String" itemvalue="Flutter Test.Stream does not emit a value when currentUser() returns an error" />
+        <item index="0" class="java.lang.String" itemvalue="Flutter Test.Creates correct ConferenceEvent with map" />
+        <item index="1" class="java.lang.String" itemvalue="Flutter Test.tests in test" />
+        <item index="2" class="java.lang.String" itemvalue="Flutter Test.tests in login_bloc_test.dart" />
+        <item index="3" class="java.lang.String" itemvalue="Flutter Test.isLoggedIn stream is closed on dispose()" />
+        <item index="4" class="java.lang.String" itemvalue="Flutter Test.isLoggedIn and getUser stream is closed on dispose()" />
       </list>
     </recent_temporary>
   </component>
@@ -403,14 +426,14 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Stream_does_not_emit_a_value_when_currentUser()_returns_an_error - 2018.09.09 at 11h 53m 35s.xml">
-      <configuration name="Stream does not emit a value when currentUser() returns an error" configurationId="FlutterTestConfigType" />
+    <history-entry file="Creates_correct_ConferenceEvent_with_map - 2018.09.09 at 22h 32m 27s.xml">
+      <configuration name="Creates correct ConferenceEvent with map" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="Stream_does_not_emit_a_value_when_currentUser()_returns_an_error - 2018.09.09 at 11h 54m 55s.xml">
-      <configuration name="Stream does not emit a value when currentUser() returns an error" configurationId="FlutterTestConfigType" />
+    <history-entry file="Creates_correct_ConferenceEvent_with_map - 2018.09.09 at 22h 37m 11s.xml">
+      <configuration name="Creates correct ConferenceEvent with map" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="Stream_does_not_emit_a_value_when_currentUser()_returns_an_error - 2018.09.09 at 11h 57m 00s.xml">
-      <configuration name="Stream does not emit a value when currentUser() returns an error" configurationId="FlutterTestConfigType" />
+    <history-entry file="Creates_correct_ConferenceEvent_with_map - 2018.09.09 at 22h 37m 33s.xml">
+      <configuration name="Creates correct ConferenceEvent with map" configurationId="FlutterTestConfigType" />
     </history-entry>
     <history-entry file="Stream_does_not_emit_a_value_when_currentUser()_returns_an_error - 2018.09.09 at 11h 57m 24s.xml">
       <configuration name="Stream does not emit a value when currentUser() returns an error" configurationId="FlutterTestConfigType" />
@@ -504,22 +527,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -856,6 +863,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/widget_test.dart" />
+    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/pages/splash_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -874,27 +898,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/widget_test.dart" />
-    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+    <entry file="file://$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.8.0/lib/src/document_reference.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        <state relative-caret-position="102">
+          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/test/unit_tests/models/conference_event_test.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="717">
+          <caret line="43" column="62" lean-forward="false" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/models/conference_event.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="285">
+          <caret line="15" column="56" lean-forward="true" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
           <folding />
         </state>
       </provider>
