@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f7149e70-f826-4cd8-99c8-3a8e153f77cf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/test/unit_tests/repository/conference_event_repository_test.dart" afterPath="$PROJECT_DIR$/test/unit_tests/repository/conference_event_repository_test.dart" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov.info" afterPath="$PROJECT_DIR$/coverage/lcov.info" />
+      <change beforePath="$PROJECT_DIR$/lib/blocs/events_bloc.dart" afterPath="$PROJECT_DIR$/lib/blocs/events_bloc.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -21,7 +22,7 @@
       <file leaf-file-name="splash_screen.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/pages/splash_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="76">
               <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
               <folding />
             </state>
@@ -31,7 +32,7 @@
       <file leaf-file-name="conference_event_repository.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/repository/conference_event_repository.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="114">
               <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
@@ -43,8 +44,8 @@
       <file leaf-file-name="events_bloc.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/blocs/events_bloc.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1444">
-              <caret line="76" column="18" lean-forward="false" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+            <state relative-caret-position="684">
+              <caret line="77" column="7" lean-forward="false" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -52,13 +53,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conference_event_repository_test.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="events_bloc_test.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/unit_tests/blocs/events_bloc_test.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="122" column="6" lean-forward="true" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_bloc_test.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/unit_tests/blocs/login_bloc_test.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conference_event_repository_test.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/unit_tests/repository/conference_event_repository_test.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="66" column="14" lean-forward="true" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
+            <state relative-caret-position="448">
+              <caret line="63" column="36" lean-forward="true" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
               <folding>
-                <element signature="e#53#73#0" expanded="true" />
+                <element signature="e#0#71#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,7 +90,7 @@
       <file leaf-file-name="events_bloc_provider.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/blocs/events_bloc_provider.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="323">
               <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -80,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/lib/blocs/login_bloc.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
-              <caret line="1" column="36" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="36" />
+              <caret line="1" column="36" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="1" selection-end-column="36" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -104,18 +127,6 @@
             <state relative-caret-position="19">
               <caret line="1" column="26" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navigation_routes.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/utils/navigation_routes.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -171,10 +182,11 @@
         <option value="$PROJECT_DIR$/test/unit_tests/models/conference_speaker_test.dart" />
         <option value="$PROJECT_DIR$/lib/repository/conference_repository.dart" />
         <option value="$PROJECT_DIR$/lib/repository/conference_event_repository.dart" />
-        <option value="$PROJECT_DIR$/lib/blocs/events_bloc.dart" />
         <option value="$PROJECT_DIR$/lib/blocs/events_bloc_provider.dart" />
         <option value="$PROJECT_DIR$/lib/temp.dart" />
         <option value="$PROJECT_DIR$/test/unit_tests/repository/conference_event_repository_test.dart" />
+        <option value="$PROJECT_DIR$/lib/blocs/events_bloc.dart" />
+        <option value="$PROJECT_DIR$/test/unit_tests/blocs/events_bloc_test.dart" />
       </list>
     </option>
   </component>
@@ -201,10 +213,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -278,6 +289,7 @@
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -308,7 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flutter Test.returns correct stream of list of ConferenceEvent">
+  <component name="RunManager" selected="Flutter Test.getAllEvents is called on 0 page">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -343,23 +355,24 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="Creates correct ConferenceEvent with map" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="Creates correct ConferenceEvent with map" />
-      <option name="testFile" value="$PROJECT_DIR$/test/unit_tests/models/conference_event_test.dart" />
+    <configuration name="currentPage stream test" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="currentPage stream test" />
+      <option name="testFile" value="$PROJECT_DIR$/test/unit_tests/blocs/events_bloc_test.dart" />
     </configuration>
-    <configuration name="Creates correct ConferenceSpeaker with map" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="Creates correct ConferenceSpeaker with map" />
-      <option name="testFile" value="$PROJECT_DIR$/test/unit_tests/models/conference_speaker_test.dart" />
+    <configuration name="eventsList stream test" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="eventsList stream test" />
+      <option name="testFile" value="$PROJECT_DIR$/test/unit_tests/blocs/events_bloc_test.dart" />
+    </configuration>
+    <configuration name="getAllEvents is called on 0 page" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="getAllEvents is called on 0 page" />
+      <option name="testFile" value="$PROJECT_DIR$/test/unit_tests/blocs/events_bloc_test.dart" />
     </configuration>
     <configuration name="returns correct stream of list of ConferenceEvent" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
       <option name="testName" value="returns correct stream of list of ConferenceEvent" />
       <option name="testFile" value="$PROJECT_DIR$/test/unit_tests/repository/conference_event_repository_test.dart" />
     </configuration>
-    <configuration name="tests in login_bloc_test.dart (1)" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testFile" value="$PROJECT_DIR$/test/unit_tests/blocs/login_bloc_test.dart" />
-    </configuration>
-    <configuration name="tests in test" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testDir" value="$PROJECT_DIR$/test" />
+    <configuration name="tests in events_bloc_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/unit_tests/blocs/events_bloc_test.dart" />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -415,19 +428,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Flutter.main.dart" />
-      <item index="1" class="java.lang.String" itemvalue="Flutter Test.tests in test" />
-      <item index="2" class="java.lang.String" itemvalue="Flutter Test.Creates correct ConferenceEvent with map" />
-      <item index="3" class="java.lang.String" itemvalue="Flutter Test.Creates correct ConferenceSpeaker with map" />
+      <item index="1" class="java.lang.String" itemvalue="Flutter Test.tests in events_bloc_test.dart" />
+      <item index="2" class="java.lang.String" itemvalue="Flutter Test.eventsList stream test" />
+      <item index="3" class="java.lang.String" itemvalue="Flutter Test.currentPage stream test" />
       <item index="4" class="java.lang.String" itemvalue="Flutter Test.returns correct stream of list of ConferenceEvent" />
-      <item index="5" class="java.lang.String" itemvalue="Flutter Test.tests in login_bloc_test.dart (1)" />
+      <item index="5" class="java.lang.String" itemvalue="Flutter Test.getAllEvents is called on 0 page" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Flutter Test.returns correct stream of list of ConferenceEvent" />
-        <item index="1" class="java.lang.String" itemvalue="Flutter Test.tests in login_bloc_test.dart (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Flutter Test.Creates correct ConferenceSpeaker with map" />
-        <item index="3" class="java.lang.String" itemvalue="Flutter Test.Creates correct ConferenceEvent with map" />
-        <item index="4" class="java.lang.String" itemvalue="Flutter Test.tests in test" />
+        <item index="0" class="java.lang.String" itemvalue="Flutter Test.getAllEvents is called on 0 page" />
+        <item index="1" class="java.lang.String" itemvalue="Flutter Test.tests in events_bloc_test.dart" />
+        <item index="2" class="java.lang.String" itemvalue="Flutter Test.returns correct stream of list of ConferenceEvent" />
+        <item index="3" class="java.lang.String" itemvalue="Flutter Test.currentPage stream test" />
+        <item index="4" class="java.lang.String" itemvalue="Flutter Test.eventsList stream test" />
       </list>
     </recent_temporary>
   </component>
@@ -448,39 +461,40 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="returns_correct_stream_of_list_of_ConferenceEvent - 2018.09.12 at 15h 04m 37s.xml">
+    <history-entry file="getAllEvents_is_called_on_0_page - 2018.09.12 at 17h 35m 21s.xml">
+      <configuration name="getAllEvents is called on 0 page" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="getAllEvents_is_called_on_0_page - 2018.09.12 at 17h 37m 01s.xml">
+      <configuration name="getAllEvents is called on 0 page" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="returns_correct_stream_of_list_of_ConferenceEvent - 2018.09.12 at 17h 14m 16s.xml">
       <configuration name="returns correct stream of list of ConferenceEvent" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="returns_correct_stream_of_list_of_ConferenceEvent - 2018.09.12 at 15h 04m 57s.xml">
+    <history-entry file="returns_correct_stream_of_list_of_ConferenceEvent - 2018.09.12 at 17h 14m 35s.xml">
       <configuration name="returns correct stream of list of ConferenceEvent" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="returns_correct_stream_of_list_of_ConferenceEvent - 2018.09.12 at 15h 07m 09s.xml">
+    <history-entry file="returns_correct_stream_of_list_of_ConferenceEvent - 2018.09.12 at 17h 15m 24s.xml">
       <configuration name="returns correct stream of list of ConferenceEvent" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="returns_correct_stream_of_list_of_ConferenceEvent - 2018.09.12 at 15h 08m 10s.xml">
+    <history-entry file="returns_correct_stream_of_list_of_ConferenceEvent - 2018.09.12 at 17h 15m 50s.xml">
       <configuration name="returns correct stream of list of ConferenceEvent" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="returns_correct_stream_of_list_of_ConferenceEvent - 2018.09.12 at 15h 10m 19s.xml">
-      <configuration name="returns correct stream of list of ConferenceEvent" configurationId="FlutterTestConfigType" />
+    <history-entry file="tests_in_events_bloc_test_dart - 2018.09.12 at 17h 07m 08s.xml">
+      <configuration name="tests in events_bloc_test.dart" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="returns_correct_stream_of_list_of_ConferenceEvent - 2018.09.12 at 15h 10m 45s.xml">
-      <configuration name="returns correct stream of list of ConferenceEvent" configurationId="FlutterTestConfigType" />
+    <history-entry file="tests_in_events_bloc_test_dart - 2018.09.12 at 17h 08m 11s.xml">
+      <configuration name="tests in events_bloc_test.dart" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="returns_correct_stream_of_list_of_ConferenceEvent - 2018.09.12 at 15h 11m 43s.xml">
-      <configuration name="returns correct stream of list of ConferenceEvent" configurationId="FlutterTestConfigType" />
+    <history-entry file="tests_in_events_bloc_test_dart - 2018.09.12 at 17h 16m 15s.xml">
+      <configuration name="tests in events_bloc_test.dart" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="returns_correct_stream_of_list_of_ConferenceEvent - 2018.09.12 at 15h 12m 18s.xml">
-      <configuration name="returns correct stream of list of ConferenceEvent" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="returns_correct_stream_of_list_of_ConferenceEvent - 2018.09.12 at 15h 14m 58s.xml">
-      <configuration name="returns correct stream of list of ConferenceEvent" configurationId="FlutterTestConfigType" />
-    </history-entry>
-    <history-entry file="tests_in_login_bloc_test_dart_(1) - 2018.09.11 at 20h 45m 24s.xml">
-      <configuration name="tests in login_bloc_test.dart (1)" configurationId="FlutterTestConfigType" />
+    <history-entry file="tests_in_events_bloc_test_dart - 2018.09.12 at 17h 17m 15s.xml">
+      <configuration name="tests in events_bloc_test.dart" configurationId="FlutterTestConfigType" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -490,9 +504,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -502,7 +516,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39914164" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -520,18 +534,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/animation/animations.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="339" column="14" lean-forward="false" selection-start-line="339" selection-start-column="14" selection-end-line="339" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -578,9 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -613,7 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -640,9 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -766,9 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -815,19 +815,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/pages/splash_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.8.0/lib/src/query_snapshot.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -835,7 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -852,26 +842,16 @@
     <entry file="file://$PROJECT_DIR$/lib/blocs/login_bloc.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="1" column="36" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="36" />
+          <caret line="1" column="36" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="1" selection-end-column="36" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/repository/conference_event_repository.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/blocs/events_bloc_provider.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="323">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -879,26 +859,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/temp.dart">
+    <entry file="file://$PROJECT_DIR$/lib/temp.dart" />
+    <entry file="file://$PROJECT_DIR$/lib/pages/splash_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+        <state relative-caret-position="76">
+          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit_tests/blocs/login_bloc_test.dart">
+    <entry file="file://$PROJECT_DIR$/lib/repository/conference_event_repository.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1330">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/blocs/events_bloc.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1444">
-          <caret line="76" column="18" lean-forward="false" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+        <state relative-caret-position="114">
+          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
@@ -907,10 +880,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/unit_tests/repository/conference_event_repository_test.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="66" column="14" lean-forward="true" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
+        <state relative-caret-position="448">
+          <caret line="63" column="36" lean-forward="true" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
           <folding>
-            <element signature="e#53#73#0" expanded="true" />
+            <element signature="e#0#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit_tests/blocs/login_bloc_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/blocs/events_bloc.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="77" column="7" lean-forward="false" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit_tests/blocs/events_bloc_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="122" column="6" lean-forward="true" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>

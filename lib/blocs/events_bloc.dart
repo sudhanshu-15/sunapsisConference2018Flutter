@@ -11,6 +11,10 @@ class EventsBloc {
   final _userId = BehaviorSubject<String>();
   StreamSubscription<int> _pageSubscription;
   StreamSubscription<List<ConferenceEvent>> _eventsSubscription;
+  Function(int) get setCurrentPage => _currentPage.sink.add;
+  Function(String) get setUserId => _userId.sink.add;
+
+  Observable<List<ConferenceEvent>> get getEventsList => _eventsList.stream;
 
   EventsBloc({ConferenceEventRepository repository})
       : _repository = repository ?? ConferenceEventRepository() {
