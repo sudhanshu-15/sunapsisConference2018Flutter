@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:sunapsis_conference18/blocs/login_bloc.dart';
 import 'package:sunapsis_conference18/blocs/login_bloc_provider.dart';
+import 'package:sunapsis_conference18/utils/color_config.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -36,7 +37,7 @@ class SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      color: Colors.teal[300],
+      color: iuMidnightBlue,
       child: Center(
         child: Stack(
           key: Key("splash_screen"),
@@ -44,8 +45,8 @@ class SplashScreenState extends State<SplashScreen> {
             AspectRatio(
               aspectRatio: 360 / 640,
               child: Image.asset(
-                "res/splash.png",
-                fit: BoxFit.fill,
+                "res/splashscreen.jpg",
+                fit: BoxFit.fitWidth,
               ),
             ),
             Positioned(

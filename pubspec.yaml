@@ -25,4 +25,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - res/splash.png
+    - res/sunapsislogo.png
+    - res/splashscreen.jpg

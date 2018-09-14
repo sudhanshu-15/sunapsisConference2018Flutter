@@ -57,7 +57,10 @@ class EventsState extends State<Events> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Events"),
+          title: Image.asset(
+            "res/sunapsislogo.png",
+            fit: BoxFit.cover,
+          ),
           bottom: TabBar(
             isScrollable: true,
             tabs: dateTabs,
