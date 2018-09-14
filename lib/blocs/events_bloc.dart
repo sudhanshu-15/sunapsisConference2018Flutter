@@ -6,42 +6,29 @@ import 'package:sunapsis_conference18/repository/conference_event_repository.dar
 
 class EventsBloc {
   final ConferenceEventRepository _repository;
-  final _currentPage = PublishSubject<int>();
+  final _currentPage = BehaviorSubject<int>();
   final _eventsList = BehaviorSubject<List<ConferenceEvent>>();
   final _userId = BehaviorSubject<String>();
+  final _favoriteList = BehaviorSubject<bool>(seedValue: false);
   StreamSubscription<int> _pageSubscription;
   StreamSubscription<List<ConferenceEvent>> _eventsSubscription;
   Function(int) get setCurrentPage => _currentPage.sink.add;
   Function(String) get setUserId => _userId.sink.add;
+  Function(bool) get setFavoriteList => _favoriteList.sink.add;
 
   Observable<List<ConferenceEvent>> get getEventsList => _eventsList.stream;
+  Observable<bool> get isFavoriteList => _favoriteList.stream;
 
   EventsBloc({ConferenceEventRepository repository})
       : _repository = repository ?? ConferenceEventRepository() {
-    _pageSubscription = _currentPage.listen((int page) {
-      String date;
-      switch (page) {
-        case 1:
-          date = "Sep 29";
-          break;
-        case 2:
-          date = "Sep 30";
-          break;
-        case 3:
-          date = "Oct 1";
-          break;
-        case 4:
-          date = "Oct 2";
-          break;
-        case 5:
-          date = "Oct 5";
-          break;
-        default:
-          _getAllEvents();
-          return;
-          break;
+//    _pageSubscription =
+//        _currentPage.stream.listen((int page) => _setCurrentList(page));
+    _favoriteList.stream.listen((bool value) {
+      if (value) {
+        getFavoriteEvents();
+      } else {
+        _setCurrentList(_currentPage.value);
       }
-      _getEventsByDate(date);
     });
   }
 
@@ -82,6 +69,34 @@ class EventsBloc {
     _currentPage.close();
     _eventsList.close();
     _userId.close();
-    _pageSubscription.cancel();
+    _pageSubscription?.cancel();
+    _favoriteList.close();
+  }
+
+  void _setCurrentList(int page) {
+    String date;
+    print("Current Page: $page");
+    switch (page) {
+      case 1:
+        date = "Sep 29";
+        break;
+      case 2:
+        date = "Sep 30";
+        break;
+      case 3:
+        date = "Oct 1";
+        break;
+      case 4:
+        date = "Oct 2";
+        break;
+      case 5:
+        date = "Oct 5";
+        break;
+      default:
+        _getAllEvents();
+        return;
+        break;
+    }
+    _getEventsByDate(date);
   }
 }

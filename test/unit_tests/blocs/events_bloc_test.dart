@@ -138,6 +138,8 @@ main() {
     final ConferenceEvent _event = ConferenceEvent.buildFromMap(_responseMap2);
     test('toggleFavorie is called on repository', () {
       final EventsBloc bloc = EventsBloc(repository: mockRepository);
+      when(mockRepository.getAllEvents())
+          .thenAnswer((_) => Stream.fromFuture(Future.value([])));
       bloc.setUserId('user 1');
       bloc.updateFavorite(_event);
       verify(mockRepository.toggleFavorite(_event, 'user 1')).called(1);
