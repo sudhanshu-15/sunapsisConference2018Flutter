@@ -4,6 +4,7 @@ import 'package:sunapsis_conference18/blocs/events_bloc.dart';
 import 'package:sunapsis_conference18/blocs/login_bloc.dart';
 import 'package:sunapsis_conference18/blocs/login_bloc_provider.dart';
 import 'package:sunapsis_conference18/models/conference_event.dart';
+import 'package:sunapsis_conference18/utils/color_config.dart';
 import 'package:sunapsis_conference18/widgets/event_card.dart';
 
 class EventList extends StatefulWidget {
@@ -52,8 +53,11 @@ class EventListState extends State<EventList> {
                 builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
                   if (snapshot.hasData) {
                     return FloatingActionButton(
+                        backgroundColor: iuMidnightBlue,
                         child: Icon(
-                            snapshot.data ? Icons.star : Icons.star_border),
+                          snapshot.data ? Icons.star : Icons.star_border,
+                          color: iuMint,
+                        ),
                         onPressed: () {
                           print("Favorite list triggered: ${snapshot.data}");
                           eventsBloc.setFavoriteList(!snapshot.data);

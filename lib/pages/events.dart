@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sunapsis_conference18/blocs/login_bloc.dart';
-import 'package:sunapsis_conference18/blocs/login_bloc_provider.dart';
 import 'package:sunapsis_conference18/widgets/event_list.dart';
 
 class Events extends StatefulWidget {
@@ -57,7 +55,6 @@ class EventsState extends State<Events> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    LoginBloc bloc = LoginBlocProvider.of(context);
     return Scaffold(
         appBar: AppBar(
           title: Text("Events"),
