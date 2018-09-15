@@ -27,3 +27,4 @@ flutter:
   assets:
     - res/sunapsislogo.png
     - res/splashscreen.jpg
+    - res/avatar_placeholder.png

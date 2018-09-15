@@ -84,16 +84,39 @@ class EventListState extends State<EventList> {
             builder: (BuildContext context,
                 AsyncSnapshot<List<ConferenceEvent>> snapshot) {
               if (snapshot.hasData) {
-                return ListView.builder(
+                if (snapshot.data.length > 0) {
+                  return ListView.builder(
                     itemCount: snapshot.data.length,
                     itemBuilder: (BuildContext context, int index) {
                       return EventCard(snapshot.data[index],
                           userSnapshot.data.uid, eventsBloc);
-                    });
+                    },
+                  );
+                } else {
+                  return Center(
+                    child: Card(
+                      color: iuGreyLight,
+                      child: ListTile(
+                        title: Text(
+                          "You don't seem to have any favorite events at the moment.",
+                          style: TextStyle(fontSize: 20.0),
+                        ),
+                        leading: Icon(
+                          Icons.info,
+                          color: iuMint,
+                          size: 30.0,
+                        ),
+                      ),
+                    ),
+                  );
+                }
               } else {
-                return Card(
-                  child: ListTile(
-                    title: Text("No data"),
+                return Center(
+                  child: Card(
+                    color: iuGreyLight,
+                    child: ListTile(
+                      title: Text("No data"),
+                    ),
                   ),
                 );
               }

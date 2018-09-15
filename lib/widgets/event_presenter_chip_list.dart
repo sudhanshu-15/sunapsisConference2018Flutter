@@ -32,12 +32,6 @@ class EventPresenterChipList extends StatelessWidget {
           if (!snapshot.hasData) return Text("Presenter");
           return _createPresenter(snapshot.data.data);
         });
-//    List<Widget> chipList = [];
-//    for (DocumentReference reference in presenterReference) {
-//      Widget chip =
-//      chipList.add(chip);
-//    }
-//    return chipList;
   }
 
   Widget _createPresenter(Map<String, dynamic> presenterData) {
@@ -52,7 +46,11 @@ class EventPresenterChipList extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
           ),
           avatar: CircleAvatar(
-            backgroundImage: NetworkImage("${speaker.picture}", scale: 0.5),
+            child: FadeInImage.assetNetwork(
+              placeholder: 'res/avatar_placeholder.png',
+              image: speaker.picture,
+              imageScale: 0.5,
+            ),
           ),
         ),
       ),
