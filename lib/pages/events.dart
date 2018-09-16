@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sunapsis_conference18/widgets/event_list.dart';
+import 'package:sunapsis_conference18/widgets/side_drawer.dart';
 
 class Events extends StatefulWidget {
   @override
@@ -36,6 +37,13 @@ class EventsState extends State<Events> with SingleTickerProviderStateMixin {
     )
   ];
 
+  final List<DrawerItem> drawerList = [
+    DrawerItem(iconData: Icons.event, label: 'Schedules', callback: () {}),
+    DrawerItem(iconData: Icons.mic, label: 'Speakers', callback: () {}),
+    DrawerItem(iconData: Icons.launch, label: 'Twitter', callback: () {}),
+    DrawerItem(iconData: Icons.map, label: 'Explore Indy', callback: () {})
+  ];
+
   @override
   void initState() {
     super.initState();
@@ -56,28 +64,30 @@ class EventsState extends State<Events> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Image.asset(
-            "res/sunapsislogo.png",
-            fit: BoxFit.cover,
-          ),
-          bottom: TabBar(
-            isScrollable:
-                MediaQuery.of(context).orientation == Orientation.portrait,
-            tabs: dateTabs,
-            controller: _tabController,
-          ),
+      appBar: AppBar(
+        title: Image.asset(
+          "res/sunapsislogo.png",
+          fit: BoxFit.cover,
         ),
-        body: TabBarView(
+        bottom: TabBar(
+          isScrollable:
+              MediaQuery.of(context).orientation == Orientation.portrait,
+          tabs: dateTabs,
           controller: _tabController,
-          children: <Widget>[
-            EventList(0),
-            EventList(1),
-            EventList(2),
-            EventList(3),
-            EventList(4),
-            EventList(5),
-          ],
-        ));
+        ),
+      ),
+      body: TabBarView(
+        controller: _tabController,
+        children: <Widget>[
+          EventList(0),
+          EventList(1),
+          EventList(2),
+          EventList(3),
+          EventList(4),
+          EventList(5),
+        ],
+      ),
+      drawer: SideDrawer(0, drawerList),
+    );
   }
 }
