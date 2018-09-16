@@ -25,11 +25,7 @@ class EventsDetail extends StatelessWidget {
           _createTitle(context),
           _createDateTime(context),
           Divider(),
-          _loactionDetails(
-              "39.767140",
-              "-86.163655",
-              "The Westin, 241 W Washington St, Indianapolis, IN 46204",
-              context),
+          _loactionDetails(context),
           Divider(),
           _audienceUnderstanding(context),
           Divider(),
@@ -135,10 +131,11 @@ class EventsDetail extends StatelessWidget {
         ));
   }
 
-  Widget _loactionDetails(
-      String lat, String lon, String label, BuildContext context) {
-    final androidUrl = 'geo:0:0?q=$lat,$lon($label)';
-    final iosUrl = 'http:maps.apple.com/?q=$label&ll=$lat,$lon';
+  Widget _loactionDetails(BuildContext context) {
+    final androidUrl =
+        'geo:0:0?q=${_event.location.lat},${_event.location.lon}(${_event.location.address})';
+    final iosUrl =
+        'http:maps.apple.com/?q=${_event.location.address}&ll=${_event.location.lat},${_event.location.lon}';
     bool isAndroid = Theme.of(context).platform == TargetPlatform.android;
     return Container(
       padding: EdgeInsets.only(right: 8.0),
@@ -148,7 +145,7 @@ class EventsDetail extends StatelessWidget {
           color: Colors.black,
         ),
         title: Text(
-          label,
+          _event.location.address,
           style: Theme.of(context).textTheme.subhead,
         ),
         trailing: Icon(
