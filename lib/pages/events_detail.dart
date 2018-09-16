@@ -244,21 +244,21 @@ class EventsDetail extends StatelessWidget {
       leading: Icon(Icons.insert_link),
       title: Text("Resources:"),
       children: _event.resources
-          .map((String resource) => _buildResource(resource))
+          .map((EventResource resource) => _buildResource(resource))
           .toList(),
     );
   }
 
-  Widget _buildResource(String resource) {
+  Widget _buildResource(EventResource resource) {
     return ListTile(
-      title: Text(resource),
+      title: Text(resource.resourceName),
       trailing: Icon(
         Icons.launch,
         color: iuMidnightBlue,
       ),
       onTap: () async {
-        if (await canLaunch(resource)) {
-          await launch(resource);
+        if (await canLaunch(resource.link)) {
+          await launch(resource.link);
         }
       },
     );

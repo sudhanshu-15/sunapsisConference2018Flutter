@@ -14,7 +14,7 @@ class ConferenceEvent {
   String _level;
 
   /// List all possible resources, documents for a talk, ppt links etc
-  List<String> _resources;
+  List<EventResource> _resources;
 
   /// List of all the users who have marked this event as favorite
   /// Is used to filter favorite events
@@ -35,7 +35,7 @@ class ConferenceEvent {
   String get endTime => _endTime;
   String get audience => _audience;
   String get level => _level;
-  List<String> get resources => _resources;
+  List<EventResource> get resources => _resources;
   List<String> get favorite => _favorite;
   List<DocumentReference> get presenters => _presenters;
   EventLocation get location => _location;
@@ -50,7 +50,9 @@ class ConferenceEvent {
     _audience = data['audience'];
     _level = data['level'];
     _resources = List();
-    for (String resource in data['resources']) {
+    for (var resourceMap in data['resources']) {
+      EventResource resource =
+          EventResource(resourceMap['name'], resourceMap['link']);
       _resources.add(resource);
     }
     _favorite = List();
@@ -77,4 +79,14 @@ class EventLocation {
   String get lon => _lon;
 
   EventLocation(this._address, this._lat, this._lon);
+}
+
+class EventResource {
+  String _resourceName;
+  String _link;
+
+  String get resourceName => _resourceName;
+  String get link => _link;
+
+  EventResource(this._resourceName, this._link);
 }
