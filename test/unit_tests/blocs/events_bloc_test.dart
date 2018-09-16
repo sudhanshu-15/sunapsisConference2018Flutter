@@ -22,11 +22,20 @@ main() {
       'title': 'Test title',
       'description': 'test description',
       'date': 'Sep 29',
+      'location': {
+        'address': 'test address',
+        'lat': '39.767140',
+        'lon': '-86.163655'
+      },
       'starttime': '7:00',
       'endtime': '9:00',
       'audience': 'Everyone',
       'level': 'All levels',
-      'resources': ['resource 1', 'resource 2', 'resource 3'],
+      'resources': [
+        {'name': 'test resource 1', 'link': 'test link'},
+        {'name': 'test resource 2', 'link': 'test link'},
+        {'name': 'test resource 3', 'link': 'test link'}
+      ],
       'favorite': ['user 1', 'user 2', 'user 3', 'user 4'],
       'presenters': [_mockDocumentRef],
     };
@@ -35,11 +44,20 @@ main() {
       'title': 'Test title 2',
       'description': 'test description 2',
       'date': 'Sep 29',
+      'location': {
+        'address': 'test address',
+        'lat': '39.767140',
+        'lon': '-86.163655'
+      },
       'starttime': '7:00',
       'endtime': '9:00',
       'audience': 'Everyone',
       'level': 'All levels',
-      'resources': ['resource 1', 'resource 2', 'resource 3'],
+      'resources': [
+        {'name': 'test resource 1', 'link': 'test link'},
+        {'name': 'test resource 2', 'link': 'test link'},
+        {'name': 'test resource 3', 'link': 'test link'}
+      ],
       'favorite': ['user 2', 'user 3', 'user 4'],
       'presenters': [_mockDocumentRef],
     };
@@ -84,9 +102,18 @@ main() {
       'date': 'Sep 29',
       'starttime': '7:00',
       'endtime': '9:00',
+      'location': {
+        'address': 'test address',
+        'lat': '39.767140',
+        'lon': '-86.163655'
+      },
       'audience': 'Everyone',
       'level': 'All levels',
-      'resources': ['resource 1', 'resource 2', 'resource 3'],
+      'resources': [
+        {'name': 'test resource 1', 'link': 'test link'},
+        {'name': 'test resource 2', 'link': 'test link'},
+        {'name': 'test resource 3', 'link': 'test link'}
+      ],
       'favorite': ['user 1', 'user 2', 'user 3', 'user 4'],
       'presenters': [_mockDocumentRef],
     };
@@ -96,10 +123,19 @@ main() {
       'description': 'test description 2',
       'date': 'Sep 29',
       'starttime': '7:00',
+      'location': {
+        'address': 'test address',
+        'lat': '39.767140',
+        'lon': '-86.163655'
+      },
       'endtime': '9:00',
       'audience': 'Everyone',
       'level': 'All levels',
-      'resources': ['resource 1', 'resource 2', 'resource 3'],
+      'resources': [
+        {'name': 'test resource 1', 'link': 'test link'},
+        {'name': 'test resource 2', 'link': 'test link'},
+        {'name': 'test resource 3', 'link': 'test link'}
+      ],
       'favorite': ['user 2', 'user 3', 'user 4'],
       'presenters': [_mockDocumentRef],
     };
@@ -129,9 +165,18 @@ main() {
       'date': 'Sep 29',
       'starttime': '7:00',
       'endtime': '9:00',
+      'location': {
+        'address': 'test address',
+        'lat': '39.767140',
+        'lon': '-86.163655'
+      },
       'audience': 'Everyone',
       'level': 'All levels',
-      'resources': ['resource 1', 'resource 2', 'resource 3'],
+      'resources': [
+        {'name': 'test resource 1', 'link': 'test link'},
+        {'name': 'test resource 2', 'link': 'test link'},
+        {'name': 'test resource 3', 'link': 'test link'}
+      ],
       'favorite': ['user 2', 'user 3', 'user 4'],
       'presenters': [_mockDocumentRef],
     };

@@ -18,10 +18,19 @@ main() {
         'description': 'test description',
         'date': 'Sep 29',
         'starttime': '7:00',
+        'location': {
+          'address': 'test address',
+          'lat': '39.767140',
+          'lon': '-86.163655'
+        },
         'endtime': '9:00',
         'audience': 'Everyone',
         'level': 'All levels',
-        'resources': ['resource 1', 'resource 2', 'resource 3'],
+        'resources': [
+          {'name': 'test resource 1', 'link': 'test link'},
+          {'name': 'test resource 2', 'link': 'test link'},
+          {'name': 'test resource 3', 'link': 'test link'}
+        ],
         'favorite': ['user 1', 'user 2', 'user 3', 'user 4'],
         'presenters': [_mockDocumentRef],
       };
@@ -38,8 +47,9 @@ main() {
       expect(conferenceEvent.endTime, _responseMap['endtime']);
       expect(conferenceEvent.audience, _responseMap['audience']);
       expect(conferenceEvent.level, _responseMap['level']);
+      expect(conferenceEvent.location.address, 'test address');
       expect(conferenceEvent.resources.length, 3);
-      expect(conferenceEvent.resources[0], 'resource 1');
+      expect(conferenceEvent.resources[0].resourceName, 'test resource 1');
       expect(conferenceEvent.favorite.length, 4);
       expect(conferenceEvent.presenters[0], _mockDocumentRef);
     });
