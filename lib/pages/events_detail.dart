@@ -22,43 +22,8 @@ class EventsDetail extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          Center(
-            child: Container(
-              padding: EdgeInsets.all(16.0),
-              child: Text(
-                _event.title,
-                style: Theme.of(context).textTheme.headline,
-              ),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(left: 16.0, right: 8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
-              children: <Widget>[
-                Icon(Icons.calendar_today),
-                Container(
-                  width: 15.0,
-                ),
-                Text(
-                  _event.date,
-                  style: Theme.of(context).textTheme.subhead,
-                ),
-                Container(
-                  width: 25.0,
-                ),
-                Icon(Icons.access_time),
-                Container(
-                  width: 15.0,
-                ),
-                Text(
-                  "${_event.startTime} - ${_event.endTime}",
-                  style: Theme.of(context).textTheme.subhead,
-                ),
-              ],
-            ),
-          ),
+          _createTitle(context),
+          _createDateTime(context),
           Divider(),
           _loactionDetails(
               "39.767140",
@@ -66,18 +31,60 @@ class EventsDetail extends StatelessWidget {
               "The Westin, 241 W Washington St, Indianapolis, IN 46204",
               context),
           Divider(),
-          _audienceUnderstanding(_event.audience, _event.level, context),
+          _audienceUnderstanding(context),
           Divider(),
-          _createPresenterList(_event.presenters),
-          _createDetails(_event.description),
-          _buildResourcesTile(_event.resources),
+          _createPresenterList(),
+          _createDetails(),
+          _buildResourcesTile(),
         ],
       ),
     );
   }
 
-  Widget _audienceUnderstanding(
-      String audience, String level, BuildContext context) {
+  Widget _createTitle(BuildContext context) {
+    return Center(
+      child: Container(
+        padding: EdgeInsets.all(16.0),
+        child: Text(
+          _event.title,
+          style: Theme.of(context).textTheme.headline,
+        ),
+      ),
+    );
+  }
+
+  Widget _createDateTime(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(left: 16.0, right: 8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          Icon(Icons.calendar_today),
+          Container(
+            width: 15.0,
+          ),
+          Text(
+            _event.date,
+            style: Theme.of(context).textTheme.subhead,
+          ),
+          Container(
+            width: 25.0,
+          ),
+          Icon(Icons.access_time),
+          Container(
+            width: 15.0,
+          ),
+          Text(
+            "${_event.startTime} - ${_event.endTime}",
+            style: Theme.of(context).textTheme.subhead,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _audienceUnderstanding(BuildContext context) {
     return Container(
         padding: EdgeInsets.only(left: 16.0, right: 16.0),
         child: Column(
@@ -97,7 +104,7 @@ class EventsDetail extends StatelessWidget {
                       .copyWith(fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  '$audience',
+                  '${_event.audience}',
                   style: Theme.of(context).textTheme.subhead,
                 ),
               ],
@@ -119,7 +126,7 @@ class EventsDetail extends StatelessWidget {
                       .copyWith(fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  '$level',
+                  '${_event.level}',
                   style: Theme.of(context).textTheme.subhead,
                 )
               ],
@@ -159,8 +166,8 @@ class EventsDetail extends StatelessWidget {
     );
   }
 
-  Widget _createPresenterList(List<DocumentReference> presenterReference) {
-    if (presenterReference.length == 0) {
+  Widget _createPresenterList() {
+    if (_event.presenters.length == 0) {
       return Container(
         height: 0.0,
         width: 0.0,
@@ -176,7 +183,7 @@ class EventsDetail extends StatelessWidget {
                   .subhead
                   .copyWith(fontWeight: FontWeight.bold))
         ];
-        for (DocumentReference ref in presenterReference) {
+        for (DocumentReference ref in _event.presenters) {
           Widget widget = _buildChipList(ref);
           list.add(widget);
         }
@@ -220,18 +227,18 @@ class EventsDetail extends StatelessWidget {
     );
   }
 
-  Widget _createDetails(String details) {
+  Widget _createDetails() {
     return Container(
       padding: EdgeInsets.all(16.0),
       child: Text(
-        details,
+        _event.description,
         style: TextStyle(fontSize: 20.0),
       ),
     );
   }
 
-  Widget _buildResourcesTile(List<String> resources) {
-    if (resources.length == 0)
+  Widget _buildResourcesTile() {
+    if (_event.resources.length == 0)
       return Container(
         width: 0.0,
         height: 0.0,
@@ -239,8 +246,9 @@ class EventsDetail extends StatelessWidget {
     return ExpansionTile(
       leading: Icon(Icons.insert_link),
       title: Text("Resources:"),
-      children:
-          resources.map((String resource) => _buildResource(resource)).toList(),
+      children: _event.resources
+          .map((String resource) => _buildResource(resource))
+          .toList(),
     );
   }
 
