@@ -12,6 +12,7 @@ dependencies:
   cloud_firestore: ^0.8.0
   firebase_auth: ^0.5.20
   rxdart: ^0.18.1
+  url_launcher: ^3.0.3
 
   cupertino_icons: ^0.1.2
 

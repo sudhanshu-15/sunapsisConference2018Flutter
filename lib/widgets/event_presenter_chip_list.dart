@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:sunapsis_conference18/models/conference_speaker.dart';
 import 'package:sunapsis_conference18/utils/color_config.dart';
+import 'package:sunapsis_conference18/widgets/avatar_fade_image.dart';
 
 class EventPresenterChipList extends StatelessWidget {
   final List<DocumentReference> presenterReference;
@@ -12,14 +13,23 @@ class EventPresenterChipList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 40.0,
-      child: Container(
-        child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: presenterReference.length,
-          itemBuilder: (BuildContext context, int index) {
-            return _buildChipList(presenterReference[index]);
-          },
-        ),
+      child: Builder(
+        builder: (BuildContext context) {
+          if (presenterReference.length == 0)
+            return Container(
+              height: 0.0,
+              width: 0.0,
+            );
+          return Container(
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: presenterReference.length,
+              itemBuilder: (BuildContext context, int index) {
+                return _buildChipList(presenterReference[index]);
+              },
+            ),
+          );
+        },
       ),
     );
   }
@@ -45,13 +55,7 @@ class EventPresenterChipList extends StatelessWidget {
             "${speaker.name}",
             style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
           ),
-          avatar: CircleAvatar(
-            child: FadeInImage.assetNetwork(
-              placeholder: 'res/avatar_placeholder.png',
-              image: speaker.picture,
-              imageScale: 0.5,
-            ),
-          ),
+          avatar: AvatarFadeImage(speaker.picture, 0.5),
         ),
       ),
       onTap: () {

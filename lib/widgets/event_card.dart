@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sunapsis_conference18/blocs/events_bloc.dart';
 import 'package:sunapsis_conference18/models/conference_event.dart';
+import 'package:sunapsis_conference18/pages/events_detail.dart';
 import 'package:sunapsis_conference18/utils/color_config.dart';
 import 'package:sunapsis_conference18/widgets/event_presenter_chip_list.dart';
 
@@ -13,17 +14,23 @@ class EventCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: iuGreyLight,
-      child: Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Row(
-          children: <Widget>[
-            _buildDateTimeColumn(),
-            _buildEventTile(eventsBloc)
-          ],
+    return GestureDetector(
+      child: Card(
+        color: iuGreyLight,
+        child: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Row(
+            children: <Widget>[
+              _buildDateTimeColumn(),
+              _buildEventTile(eventsBloc)
+            ],
+          ),
         ),
       ),
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) => EventsDetail(_event)));
+      },
     );
   }
 
