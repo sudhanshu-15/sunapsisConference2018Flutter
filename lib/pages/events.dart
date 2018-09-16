@@ -62,7 +62,8 @@ class EventsState extends State<Events> with SingleTickerProviderStateMixin {
             fit: BoxFit.cover,
           ),
           bottom: TabBar(
-            isScrollable: true,
+            isScrollable:
+                MediaQuery.of(context).orientation == Orientation.portrait,
             tabs: dateTabs,
             controller: _tabController,
           ),

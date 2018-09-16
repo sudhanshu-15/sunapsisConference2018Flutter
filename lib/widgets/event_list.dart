@@ -95,11 +95,12 @@ class EventListState extends State<EventList> {
                 } else {
                   return Center(
                     child: Card(
-                      color: iuGreyLight,
+                      color: iuGreyDark,
                       child: ListTile(
                         title: Text(
                           "You don't seem to have any favorite events at the moment.",
-                          style: TextStyle(fontSize: 20.0),
+                          style:
+                              TextStyle(fontSize: 20.0, color: Colors.white70),
                         ),
                         leading: Icon(
                           Icons.info,
