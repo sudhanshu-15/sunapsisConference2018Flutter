@@ -25,6 +25,7 @@ class ConferenceEvent {
   List<DocumentReference> _presenters;
 
   //TODO: Add resource for location
+  EventLocation _location;
 
   int get eventId => _eventId;
   String get title => _title;
@@ -37,6 +38,7 @@ class ConferenceEvent {
   List<String> get resources => _resources;
   List<String> get favorite => _favorite;
   List<DocumentReference> get presenters => _presenters;
+  EventLocation get location => _location;
 
   ConferenceEvent.buildFromMap(Map<String, dynamic> data) {
     _eventId = data['eventid'];
@@ -59,5 +61,20 @@ class ConferenceEvent {
     for (DocumentReference presenter in data['presenters']) {
       _presenters.add(presenter);
     }
+    var locationMap = data['location'];
+    _location = EventLocation(
+        locationMap['address'], locationMap['lat'], locationMap['lon']);
   }
+}
+
+class EventLocation {
+  String _address;
+  String _lat;
+  String _lon;
+
+  String get address => _address;
+  String get lat => _lat;
+  String get lon => _lon;
+
+  EventLocation(this._address, this._lat, this._lon);
 }
