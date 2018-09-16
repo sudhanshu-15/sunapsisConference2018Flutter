@@ -13,7 +13,7 @@ class EventsState extends State<Events> with SingleTickerProviderStateMixin {
   final List<Tab> dateTabs = <Tab>[
     Tab(
       text: 'All',
-      icon: Icon(Icons.list),
+      icon: Icon(Icons.all_inclusive),
     ),
     Tab(
       text: 'Sep 29',

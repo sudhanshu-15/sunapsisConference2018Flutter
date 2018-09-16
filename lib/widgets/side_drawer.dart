@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sunapsis_conference18/utils/color_config.dart';
 
 class SideDrawer extends StatelessWidget {
   final int page;
@@ -13,21 +14,32 @@ class SideDrawer extends StatelessWidget {
       child: Column(
         children: <Widget>[
           DrawerHeader(
+              decoration: BoxDecoration(color: iuMidnightBlue),
               child: Image.asset(
-            'res/sunapsislogo.png',
-            fit: BoxFit.cover,
-          )),
+                'res/sunapsis-conference-logo-01.png',
+                fit: BoxFit.contain,
+              )),
           Expanded(
-            child: ListView.builder(
-                itemCount: drawerItems.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return ListTile(
-                    leading: Icon(drawerItems[index].iconData),
-                    title: Text(drawerItems[index].label),
-                    onTap: drawerItems[index].callback,
-                    selected: page == index,
-                  );
-                }),
+            child: MediaQuery.removePadding(
+              context: context,
+              removeTop: true,
+              child: ListView.builder(
+                  itemCount: drawerItems.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return ListTile(
+                      leading: Icon(
+                        drawerItems[index].iconData,
+                        size: 30.0,
+                      ),
+                      title: Text(
+                        drawerItems[index].label,
+                        style: TextStyle(fontSize: 22.0),
+                      ),
+                      onTap: drawerItems[index].callback,
+                      selected: page == index,
+                    );
+                  }),
+            ),
           ),
         ],
       ),
