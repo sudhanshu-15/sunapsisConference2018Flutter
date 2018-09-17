@@ -134,8 +134,9 @@ class EventsDetail extends StatelessWidget {
   Widget _loactionDetails(BuildContext context) {
     final androidUrl =
         'geo:0:0?q=${_event.location.lat},${_event.location.lon}(${_event.location.address})';
+    final iosLabel = _event.location.address.replaceAll(RegExp(r' '), '+');
     final iosUrl =
-        'http:maps.apple.com/?q=${_event.location.address}&ll=${_event.location.lat},${_event.location.lon}';
+        'maps://maps.apple.com/?ll=${_event.location.lat},${_event.location.lon}&z=20&q=$iosLabel';
     bool isAndroid = Theme.of(context).platform == TargetPlatform.android;
     return Container(
       padding: EdgeInsets.only(right: 8.0),

@@ -20,26 +20,22 @@ class SideDrawer extends StatelessWidget {
                 fit: BoxFit.contain,
               )),
           Expanded(
-            child: MediaQuery.removePadding(
-              context: context,
-              removeTop: true,
-              child: ListView.builder(
-                  itemCount: drawerItems.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return ListTile(
-                      leading: Icon(
-                        drawerItems[index].iconData,
-                        size: 30.0,
-                      ),
-                      title: Text(
-                        drawerItems[index].label,
-                        style: TextStyle(fontSize: 22.0),
-                      ),
-                      onTap: drawerItems[index].callback,
-                      selected: page == index,
-                    );
-                  }),
-            ),
+            child: ListView.builder(
+                itemCount: drawerItems.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return ListTile(
+                    leading: Icon(
+                      drawerItems[index].iconData,
+                      size: 30.0,
+                    ),
+                    title: Text(
+                      drawerItems[index].label,
+                      style: TextStyle(fontSize: 22.0),
+                    ),
+                    onTap: drawerItems[index].callback,
+                    selected: page == index,
+                  );
+                }),
           ),
         ],
       ),
@@ -51,5 +47,6 @@ class DrawerItem {
   final IconData iconData;
   final String label;
   final VoidCallback callback;
-  DrawerItem({this.iconData, this.label, this.callback});
+  final bool isTwitter;
+  DrawerItem({this.iconData, this.label, this.isTwitter, this.callback});
 }
