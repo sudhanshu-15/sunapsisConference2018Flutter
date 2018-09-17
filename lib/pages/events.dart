@@ -40,8 +40,17 @@ class EventsState extends State<Events> with SingleTickerProviderStateMixin {
   final List<DrawerItem> drawerList = [
     DrawerItem(iconData: Icons.event, label: 'Schedules', callback: () {}),
     DrawerItem(iconData: Icons.mic, label: 'Speakers', callback: () {}),
-    DrawerItem(iconData: Icons.launch, label: 'Twitter', callback: () {}),
-    DrawerItem(iconData: Icons.map, label: 'Explore Indy', callback: () {})
+    DrawerItem(
+        iconData: Icons.launch,
+        isTwitter: true,
+        label: 'Twitter',
+        callback: () {},
+        isExternal: true),
+    DrawerItem(
+        iconData: Icons.map,
+        label: 'Explore Indy',
+        callback: () {},
+        isExternal: true)
   ];
 
   @override

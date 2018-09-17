@@ -24,16 +24,29 @@ class SideDrawer extends StatelessWidget {
                 itemCount: drawerItems.length,
                 itemBuilder: (BuildContext context, int index) {
                   return ListTile(
-                    leading: Icon(
-                      drawerItems[index].iconData,
-                      size: 30.0,
-                    ),
+                    leading: !drawerItems[index].isTwitter
+                        ? Icon(
+                            drawerItems[index].iconData,
+                            size: 30.0,
+                          )
+                        : Image.asset(
+                            'res/twitter.png',
+                            width: 40.0,
+                            height: 40.0,
+                            fit: BoxFit.contain,
+                          ),
                     title: Text(
                       drawerItems[index].label,
                       style: TextStyle(fontSize: 22.0),
                     ),
                     onTap: drawerItems[index].callback,
                     selected: page == index,
+                    trailing: drawerItems[index].isExternal
+                        ? Icon(
+                            Icons.launch,
+                            color: iuMint,
+                          )
+                        : null,
                   );
                 }),
           ),
@@ -48,5 +61,11 @@ class DrawerItem {
   final String label;
   final VoidCallback callback;
   final bool isTwitter;
-  DrawerItem({this.iconData, this.label, this.isTwitter, this.callback});
+  final bool isExternal;
+  DrawerItem(
+      {this.iconData,
+      this.label,
+      this.isTwitter = false,
+      this.callback,
+      this.isExternal = false});
 }
