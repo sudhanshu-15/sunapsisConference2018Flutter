@@ -14,7 +14,7 @@ class ConferenceEvent {
   String _level;
 
   /// List all possible resources, documents for a talk, ppt links etc
-  List<String> _resources;
+  List<EventResource> _resources;
 
   /// List of all the users who have marked this event as favorite
   /// Is used to filter favorite events
@@ -25,6 +25,7 @@ class ConferenceEvent {
   List<DocumentReference> _presenters;
 
   //TODO: Add resource for location
+  EventLocation _location;
 
   int get eventId => _eventId;
   String get title => _title;
@@ -34,9 +35,10 @@ class ConferenceEvent {
   String get endTime => _endTime;
   String get audience => _audience;
   String get level => _level;
-  List<String> get resources => _resources;
+  List<EventResource> get resources => _resources;
   List<String> get favorite => _favorite;
   List<DocumentReference> get presenters => _presenters;
+  EventLocation get location => _location;
 
   ConferenceEvent.buildFromMap(Map<String, dynamic> data) {
     _eventId = data['eventid'];
@@ -48,7 +50,9 @@ class ConferenceEvent {
     _audience = data['audience'];
     _level = data['level'];
     _resources = List();
-    for (String resource in data['resources']) {
+    for (var resourceMap in data['resources']) {
+      EventResource resource =
+          EventResource(resourceMap['name'], resourceMap['link']);
       _resources.add(resource);
     }
     _favorite = List();
@@ -59,5 +63,30 @@ class ConferenceEvent {
     for (DocumentReference presenter in data['presenters']) {
       _presenters.add(presenter);
     }
+    var locationMap = data['location'];
+    _location = EventLocation(
+        locationMap['address'], locationMap['lat'], locationMap['lon']);
   }
+}
+
+class EventLocation {
+  String _address;
+  String _lat;
+  String _lon;
+
+  String get address => _address;
+  String get lat => _lat;
+  String get lon => _lon;
+
+  EventLocation(this._address, this._lat, this._lon);
+}
+
+class EventResource {
+  String _resourceName;
+  String _link;
+
+  String get resourceName => _resourceName;
+  String get link => _link;
+
+  EventResource(this._resourceName, this._link);
 }
