@@ -55,7 +55,7 @@ class EventPresenterChipList extends StatelessWidget {
             "${speaker.name}",
             style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
           ),
-          avatar: AvatarFadeImage(speaker.picture, 0.5),
+          avatar: AvatarFadeImage(speaker.picture),
         ),
       ),
       onTap: () {

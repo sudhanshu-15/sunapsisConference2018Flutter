@@ -216,7 +216,7 @@ class EventsDetail extends StatelessWidget {
             "${speaker.name}",
             style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
           ),
-          avatar: AvatarFadeImage(speaker.picture, 1.0),
+          avatar: AvatarFadeImage(speaker.picture),
         ),
       ),
       onTap: () {

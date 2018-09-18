@@ -39,7 +39,9 @@ class SideDrawer extends StatelessWidget {
                       drawerItems[index].label,
                       style: TextStyle(fontSize: 22.0),
                     ),
-                    onTap: drawerItems[index].callback,
+                    onTap: () {
+                      Navigator.of(context).pushNamed('/speakers');
+                    },
                     selected: page == index,
                     trailing: drawerItems[index].isExternal
                         ? Icon(
