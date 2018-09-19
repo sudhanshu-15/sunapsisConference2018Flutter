@@ -21,6 +21,7 @@ dev_dependencies:
     sdk: flutter
 
   mockito: ^3.0.0
+  flutter_launcher_icons: ^0.6.1
 
 
 flutter:
