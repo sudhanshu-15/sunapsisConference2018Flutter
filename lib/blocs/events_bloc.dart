@@ -70,6 +70,7 @@ class EventsBloc {
     _eventsList.close();
     _userId.close();
     _pageSubscription?.cancel();
+    _eventsSubscription?.cancel();
     _favoriteList.close();
   }
 
