@@ -6,22 +6,6 @@ import 'package:sunapsis_conference18/widgets/side_drawer.dart';
 import 'package:sunapsis_conference18/widgets/speaker_card.dart';
 
 class Speakers extends StatelessWidget {
-  final List<DrawerItem> drawerList = [
-    DrawerItem(iconData: Icons.event, label: 'Schedules', callback: () {}),
-    DrawerItem(iconData: Icons.mic, label: 'Speakers', callback: () {}),
-    DrawerItem(
-        iconData: Icons.launch,
-        isTwitter: true,
-        label: 'Twitter',
-        callback: () {},
-        isExternal: true),
-    DrawerItem(
-        iconData: Icons.map,
-        label: 'Explore Indy',
-        callback: () {},
-        isExternal: true)
-  ];
-
   @override
   Widget build(BuildContext context) {
     SpeakersBloc bloc = SpeakersBlocProvider.of(context);
@@ -61,7 +45,7 @@ class Speakers extends StatelessWidget {
               return Text('No data');
             }
           }),
-      drawer: SideDrawer(1, drawerList),
+      drawer: SideDrawer(1),
     );
   }
 
