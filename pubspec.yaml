@@ -32,3 +32,10 @@ flutter:
     - res/avatar_placeholder.png
     - res/sunapsis-conference-logo-01.png
     - res/twitter.png
+
+flutter_icons:
+  android: true
+  ios: "app-icon"
+  image_path: "res/sunapsis_icon.png"
+
+
