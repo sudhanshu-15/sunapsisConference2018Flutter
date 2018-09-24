@@ -36,6 +36,6 @@ flutter:
 flutter_icons:
   android: true
   ios: "app-icon"
-  image_path: "res/sunapsis_icon.png"
-
-
+  image_path: "res/conficon.png"
+  adaptive_icon_background: "#00FAFAFA"
+  adaptive_icon_foreground: "res/conficon512.png"

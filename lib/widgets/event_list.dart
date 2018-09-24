@@ -31,10 +31,8 @@ class EventListState extends State<EventList> {
   void didChangeDependencies() {
     eventsBloc = EventsBloc();
     eventsBloc.setCurrentPage(widget.pageNumber);
-    print("Current Page: ${widget.pageNumber}");
     loginBloc = LoginBlocProvider.of(context);
     loginBloc.getUser.listen((FirebaseUser user) {
-      print("${user.uid}");
       eventsBloc.setUserId(user.uid);
     });
     super.didChangeDependencies();
@@ -53,13 +51,13 @@ class EventListState extends State<EventList> {
                 builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
                   if (snapshot.hasData) {
                     return FloatingActionButton(
+                        heroTag: widget.pageNumber,
                         backgroundColor: iuMidnightBlue,
                         child: Icon(
                           snapshot.data ? Icons.star : Icons.star_border,
                           color: iuMint,
                         ),
                         onPressed: () {
-                          print("Favorite list triggered: ${snapshot.data}");
                           eventsBloc.setFavoriteList(!snapshot.data);
                         });
                   } else {
