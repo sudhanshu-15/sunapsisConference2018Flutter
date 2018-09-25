@@ -12,9 +12,11 @@ class ConferenceSpeakerRepository {
         _firestore = fireStore ?? Firestore.instance;
 
   Stream<List<ConferenceSpeaker>> getSpeakersList() {
-    print('Get all speakers called');
     return _firestore
         .collection(_collectionName)
+        .orderBy(
+          'name',
+        )
         .snapshots()
         .map((QuerySnapshot snapshot) => _speakersMapper(snapshot));
   }
