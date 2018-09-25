@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:sunapsis_conference18/models/conference_speaker.dart';
+import 'package:sunapsis_conference18/pages/speaker_detail.dart';
 import 'package:sunapsis_conference18/utils/color_config.dart';
 import 'package:sunapsis_conference18/widgets/avatar_fade_image.dart';
 
@@ -25,7 +26,7 @@ class EventPresenterChipList extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: presenterReference.length,
               itemBuilder: (BuildContext context, int index) {
-                return _buildChipList(presenterReference[index]);
+                return _buildChipList(presenterReference[index], context);
               },
             ),
           );
@@ -34,17 +35,18 @@ class EventPresenterChipList extends StatelessWidget {
     );
   }
 
-  Widget _buildChipList(DocumentReference reference) {
+  Widget _buildChipList(DocumentReference reference, BuildContext context) {
     return StreamBuilder(
         stream: reference.snapshots(),
         builder:
             (BuildContext context, AsyncSnapshot<DocumentSnapshot> snapshot) {
           if (!snapshot.hasData) return Text("Presenter");
-          return _createPresenter(snapshot.data.data);
+          return _createPresenter(snapshot.data.data, context);
         });
   }
 
-  Widget _createPresenter(Map<String, dynamic> presenterData) {
+  Widget _createPresenter(
+      Map<String, dynamic> presenterData, BuildContext context) {
     ConferenceSpeaker speaker = ConferenceSpeaker.buildFromMap(presenterData);
     return GestureDetector(
       child: Padding(
@@ -55,11 +57,16 @@ class EventPresenterChipList extends StatelessWidget {
             "${speaker.name}",
             style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
           ),
-          avatar: AvatarFadeImage(speaker.picture, 0.5),
+          avatar: Hero(tag: speaker, child: AvatarFadeImage(speaker.picture)),
         ),
       ),
       onTap: () {
-        print("${speaker.name}");
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (BuildContext context) {
+          return SpeakerDetail(
+            speaker: speaker,
+          );
+        }));
       },
     );
   }

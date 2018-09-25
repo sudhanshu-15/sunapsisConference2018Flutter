@@ -12,18 +12,18 @@ class ConferenceEventRepository {
         _firestore = fireStore ?? Firestore.instance;
 
   Stream<List<ConferenceEvent>> getAllEvents() {
-    print('Get all events called');
     return _firestore
         .collection(_collectionName)
+        .orderBy('eventid')
         .snapshots()
         .map((QuerySnapshot snapshot) => _eventMapper(snapshot));
   }
 
   Stream<List<ConferenceEvent>> getEventsByDate(String date) {
-    print('Get events by date called');
     return _firestore
         .collection(_collectionName)
         .where('date', isEqualTo: date)
+        .orderBy('eventid')
         .snapshots()
         .map((QuerySnapshot snapshot) => _eventMapper(snapshot));
   }
@@ -35,21 +35,17 @@ class ConferenceEventRepository {
   }
 
   void toggleFavorite(ConferenceEvent event, String userId) async {
-    print('toggle favorite called');
     final DocumentReference eventReference =
         _firestore.document('$_collectionName/event${event.eventId}');
     _firestore.runTransaction((Transaction transaction) async {
       DocumentSnapshot eventSnapshot = await transaction.get(eventReference);
       if (eventSnapshot.exists) {
-        print('Snapshot found');
         List<String> favorite = event.favorite;
         if (favorite.contains(userId)) {
-          print('User id found');
           favorite.remove(userId);
           await transaction
               .update(eventReference, <String, dynamic>{'favorite': favorite});
         } else {
-          print('User not found');
           favorite.add(userId);
           await transaction
               .update(eventReference, <String, dynamic>{'favorite': favorite});
@@ -59,7 +55,6 @@ class ConferenceEventRepository {
   }
 
   List<ConferenceEvent> _eventMapper(QuerySnapshot snapshot) {
-    print('Called mapper');
     List<ConferenceEvent> events = [];
     for (int i = 0; i < snapshot.documents.length; i++) {
       DocumentSnapshot documentSnapshot = snapshot.documents[i];

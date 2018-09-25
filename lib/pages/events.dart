@@ -96,7 +96,7 @@ class EventsState extends State<Events> with SingleTickerProviderStateMixin {
           EventList(5),
         ],
       ),
-      drawer: SideDrawer(0, drawerList),
+      drawer: SideDrawer(0),
     );
   }
 }
