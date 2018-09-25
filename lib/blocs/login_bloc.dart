@@ -8,16 +8,9 @@ class LoginBloc {
   /// True if logged in, false otherwise and has error if there was an error
   final _isLoggedIn = PublishSubject<bool>();
 
-//  final _isFavoriteList = BehaviorSubject<bool>(seedValue: false);
-
   /// Stream that stores the value of a FirebaseUser
   final _firebaseUser = BehaviorSubject<FirebaseUser>(seedValue: null);
 
-//  Function() get setFavoriteList => () {
-//        _isFavoriteList.sink.add(!_isFavoriteList.value);
-//      };
-//
-//  Observable<bool> get isFavoriteList => _isFavoriteList.stream;
   Observable<bool> get isLoggedIn => _isLoggedIn.stream;
   Observable<FirebaseUser> get getUser => _firebaseUser.stream;
 
@@ -29,13 +22,11 @@ class LoginBloc {
       : _firebaseAuth = firebaseAuth ?? FirebaseAuth.instance {
     _firebaseAuth.currentUser().then((FirebaseUser user) {
       if (user != null && user.uid.length > 0) {
-        print("User: ${user.uid}");
         _isLoggedIn.sink.add(true);
         _firebaseUser.sink.add(user);
       } else {
         _firebaseAuth.signInAnonymously().then((FirebaseUser user) {
           if (user != null && user.uid.length > 0) {
-            print("User: ${user.uid}");
             _isLoggedIn.sink.add(true);
             _firebaseUser.sink.add(user);
           }
@@ -48,6 +39,5 @@ class LoginBloc {
   void dispose() {
     _isLoggedIn.close();
     _firebaseUser.close();
-//    _isFavoriteList.close();
   }
 }

@@ -51,9 +51,13 @@ class SideDrawer extends StatelessWidget {
         children: <Widget>[
           DrawerHeader(
               decoration: BoxDecoration(color: iuMidnightBlue),
-              child: Image.asset(
-                'res/sunapsis-conference-logo-01.png',
-                fit: BoxFit.contain,
+              child: Container(
+                height: 300.0,
+                width: 300.0,
+                child: Image.asset(
+                  'res/sunapsis-conference-logo-01.png',
+                  fit: BoxFit.contain,
+                ),
               )),
           Expanded(
             child: ListView.builder(

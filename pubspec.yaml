@@ -1,7 +1,7 @@
 name: sunapsis_conference18
 description: App for sunapsis Conference 2018, made with Flutter. App provides schedule or the entire conference.
 
-version: 1.0.0+1
+version: 1.0.3+4
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
@@ -32,3 +32,10 @@ flutter:
     - res/avatar_placeholder.png
     - res/sunapsis-conference-logo-01.png
     - res/twitter.png
+
+flutter_icons:
+  android: true
+  ios: "app-icon"
+  image_path: "res/conficon.png"
+  adaptive_icon_background: "#FF44697D"
+  adaptive_icon_foreground: "res/fedora.png"

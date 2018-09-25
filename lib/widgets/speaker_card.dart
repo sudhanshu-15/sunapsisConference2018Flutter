@@ -25,6 +25,7 @@ class SpeakerCard extends StatelessWidget {
                     title: Text(
                   conferenceSpeaker.name,
                   style: Theme.of(context).textTheme.title,
+                  maxLines: 4,
                 )),
                 OrientationBuilder(
                     builder: (BuildContext context, Orientation orientation) {
@@ -39,7 +40,9 @@ class SpeakerCard extends StatelessWidget {
                 GridTileBar(
                   title: Chip(
                       backgroundColor: iuGreyDark,
-                      label: Text(conferenceSpeaker.organization)),
+                      label: Text(
+                        conferenceSpeaker.organization,
+                      )),
                 ),
               ],
             ),
