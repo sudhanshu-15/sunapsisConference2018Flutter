@@ -21,8 +21,6 @@ class EventsBloc {
 
   EventsBloc({ConferenceEventRepository repository})
       : _repository = repository ?? ConferenceEventRepository() {
-//    _pageSubscription =
-//        _currentPage.stream.listen((int page) => _setCurrentList(page));
     _favoriteList.stream.listen((bool value) {
       if (value) {
         getFavoriteEvents();
@@ -47,7 +45,6 @@ class EventsBloc {
   }
 
   void _getAllEvents() {
-    print("get all events called");
     _eventsSubscription?.cancel();
     _eventsSubscription =
         _repository.getAllEvents().listen((List<ConferenceEvent> eventList) {
@@ -56,7 +53,6 @@ class EventsBloc {
   }
 
   void _getEventsByDate(String date) {
-    print("get events by date called");
     _eventsSubscription?.cancel();
     _eventsSubscription = _repository
         .getEventsByDate(date)
@@ -70,12 +66,12 @@ class EventsBloc {
     _eventsList.close();
     _userId.close();
     _pageSubscription?.cancel();
+    _eventsSubscription?.cancel();
     _favoriteList.close();
   }
 
   void _setCurrentList(int page) {
     String date;
-    print("Current Page: $page");
     switch (page) {
       case 1:
         date = "Sep 29";
@@ -90,7 +86,7 @@ class EventsBloc {
         date = "Oct 2";
         break;
       case 5:
-        date = "Oct 5";
+        date = "Oct 3";
         break;
       default:
         _getAllEvents();
