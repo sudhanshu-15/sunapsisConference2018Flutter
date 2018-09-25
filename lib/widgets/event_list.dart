@@ -44,8 +44,8 @@ class EventListState extends State<EventList> {
       children: <Widget>[
         _buildList(context, loginBloc),
         Positioned(
-            bottom: 30.0,
-            right: 30.0,
+            bottom: 12.0,
+            right: 20.0,
             child: StreamBuilder(
                 stream: eventsBloc.isFavoriteList,
                 builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
