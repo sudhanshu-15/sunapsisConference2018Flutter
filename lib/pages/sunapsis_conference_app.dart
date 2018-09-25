@@ -15,6 +15,7 @@ class SunapsisConferenceApp extends StatelessWidget {
           onGenerateRoute: navigationRoutes.routes,
           title: "sunapsis Conference 2018",
           theme: iuTheme,
+          debugShowCheckedModeBanner: false,
         ),
       ),
     );
