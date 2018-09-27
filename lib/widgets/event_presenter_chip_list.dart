@@ -52,7 +52,7 @@ class EventPresenterChipList extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(left: 8.0),
         child: Chip(
-          backgroundColor: iuGreyDark,
+          backgroundColor: iuGreyLight,
           label: Text(
             "${speaker.name}",
             style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),

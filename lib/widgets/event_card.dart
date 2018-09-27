@@ -16,7 +16,7 @@ class EventCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Card(
-        color: iuGreyLight,
+        color: Colors.grey[200],
         child: Padding(
           padding: EdgeInsets.all(8.0),
           child: Row(
@@ -41,13 +41,13 @@ class EventCard extends StatelessWidget {
         children: <Widget>[
           Text(
             "${_event.startTime}",
-            style: TextStyle(color: Colors.black54, fontSize: 24.0),
+            style: TextStyle(color: Colors.black87, fontSize: 24.0),
             key: Key("startTime${_event.eventId}"),
           ),
           Icon(Icons.arrow_drop_down),
           Text(
             "${_event.endTime}",
-            style: TextStyle(color: Colors.black54, fontSize: 24.0),
+            style: TextStyle(color: Colors.black87, fontSize: 24.0),
             key: Key("dividerIcon${_event.eventId}"),
           ),
           Text(
@@ -69,7 +69,7 @@ class EventCard extends StatelessWidget {
             title: Text(
               "${_event.title}",
               style: TextStyle(
-                  color: Colors.black54,
+                  color: Colors.black87,
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold),
             ),

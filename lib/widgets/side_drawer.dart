@@ -71,8 +71,8 @@ class SideDrawer extends StatelessWidget {
                           )
                         : Image.asset(
                             'res/twitter.png',
-                            width: 40.0,
-                            height: 40.0,
+                            width: 35.0,
+                            height: 35.0,
                             fit: BoxFit.contain,
                           ),
                     title: Text(

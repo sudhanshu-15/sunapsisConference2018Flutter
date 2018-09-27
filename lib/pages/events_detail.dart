@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:sunapsis_conference18/models/conference_event.dart';
 import 'package:sunapsis_conference18/models/conference_speaker.dart';
 import 'package:sunapsis_conference18/pages/speaker_detail.dart';
@@ -26,7 +27,9 @@ class EventsDetail extends StatelessWidget {
           _createTitle(context),
           _createDateTime(context),
           Divider(),
-          _loactionDetails(context),
+          Builder(builder: (BuildContext context) {
+            return _loactionDetails(context);
+          }),
           Divider(),
           _audienceUnderstanding(context),
           Divider(),
@@ -161,6 +164,15 @@ class EventsDetail extends StatelessWidget {
             await launch(url);
           }
         },
+        onLongPress: () {
+          Clipboard.setData(ClipboardData(text: _event.location.address));
+          Scaffold.of(context).showSnackBar(
+            SnackBar(
+              content: Text("Copied Address"),
+              backgroundColor: Colors.blue,
+            ),
+          );
+        },
       ),
     );
   }
@@ -213,7 +225,7 @@ class EventsDetail extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(left: 8.0),
         child: Chip(
-          backgroundColor: iuGreyDark,
+          backgroundColor: iuGreyLight,
           label: Text(
             "${speaker.name}",
             style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),

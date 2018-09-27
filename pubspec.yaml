@@ -1,7 +1,7 @@
 name: sunapsis_conference18
 description: App for sunapsis Conference 2018, made with Flutter. App provides schedule or the entire conference.
 
-version: 1.0.3+4
+version: 1.0.4+5
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"

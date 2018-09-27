@@ -13,7 +13,7 @@ class SpeakerCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Card(
-        color: iuGreyLight,
+        color: Colors.grey[200],
         child: Container(
           child: GridTile(
             child: Column(
