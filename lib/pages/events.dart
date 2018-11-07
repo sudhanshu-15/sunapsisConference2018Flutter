@@ -56,7 +56,39 @@ class EventsState extends State<Events> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: dateTabs.length, vsync: this);
+    int initialIndex = 0;
+    var presentDate = DateTime.now();
+    if ((presentDate.month == 9 || presentDate.month == 10) &&
+        presentDate.year == 2018) {
+      if (presentDate.month == 9) {
+        switch (presentDate.day) {
+          case 29:
+            initialIndex = 1;
+            break;
+          case 30:
+            initialIndex = 2;
+            break;
+          default:
+            break;
+        }
+      } else if (presentDate.month == 10) {
+        switch (presentDate.day) {
+          case 1:
+            initialIndex = 3;
+            break;
+          case 2:
+            initialIndex = 4;
+            break;
+          case 3:
+            initialIndex = 5;
+            break;
+          default:
+            break;
+        }
+      }
+    }
+    _tabController = TabController(
+        length: dateTabs.length, vsync: this, initialIndex: initialIndex);
   }
 
   @override

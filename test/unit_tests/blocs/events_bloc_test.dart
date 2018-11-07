@@ -142,7 +142,7 @@ main() {
     final ConferenceEvent _event = ConferenceEvent.buildFromMap(_responseMap);
     final ConferenceEvent _event2 = ConferenceEvent.buildFromMap(_responseMap2);
 
-    test('eventsList stream gets a correct value on repository call', () async {
+    test('eventsList stream gets a correct value on favorite call', () async {
       final EventsBloc bloc = EventsBloc(repository: mockRepository);
       Stream answer = Future.value([_event, _event2]).asStream();
       when(mockRepository.getEventsByDate("Sep 30")).thenAnswer((_) => answer);
@@ -151,6 +151,26 @@ main() {
       await expectLater(bloc.getEventsList, emits([_event, _event2]));
       bloc.getFavoriteEvents();
       await expectLater(bloc.getEventsList, emits([_event]));
+    });
+
+    test('eventsList stream gets a correct value on favorite stream value',
+        () async {
+      final EventsBloc bloc = EventsBloc(repository: mockRepository);
+      Stream answer = Future.value([_event, _event2]).asStream();
+      when(mockRepository.getEventsByDate("Sep 30")).thenAnswer((_) => answer);
+      bloc.setCurrentPage(2);
+      bloc.setUserId('user 1');
+      await expectLater(bloc.getEventsList, emits([_event, _event2]));
+      bloc.setFavoriteList(true);
+      await expectLater(
+        bloc.getEventsList,
+        emitsInOrder(
+          [
+            [_event, _event2],
+            [_event]
+          ],
+        ),
+      );
     });
   });
 
