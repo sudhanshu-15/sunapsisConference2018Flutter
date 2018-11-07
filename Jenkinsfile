@@ -1,4 +1,3 @@
-Jenkinsfile
 pipeline {
     agent any
     stages {
