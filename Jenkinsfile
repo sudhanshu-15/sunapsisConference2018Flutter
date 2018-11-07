@@ -1,20 +1,23 @@
+Jenkinsfile
 pipeline {
-    
-    stage('Checkout') {
-        checkout scm
-    }
-
-    stage('Flutter Doctor') {
-        steps {
-            echo "Running Flutter doctor"
-            sh "flutter doctor"
+    agent any
+    stages {
+        stage ('Checkout') {
+            steps {
+                checkout scm
+            }
         }
-    }
-
-    stage('Test') {
-        steps {
-            echo "Running tests"
-            sh "flutter test"
+        stage ('Flutter Doctor') {
+            steps {
+                echo "Running Flutter doctor"
+                sh "flutter doctor"
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "Running tests"
+                sh "flutter test"
+            }
         }
     }
 }
