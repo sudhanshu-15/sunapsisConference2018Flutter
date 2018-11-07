@@ -1,5 +1,4 @@
-Jenkinsfile (Declarative Pipeline)
-Pipeline {
+pipeline {
     timeout(60) {
         timestamps {
             node {
